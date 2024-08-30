@@ -1,0 +1,98 @@
+@font-face{
+    font-family: "myfont";
+    src: url("./PixelMplus12-Regular.ttf") format("truetype");
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+header{
+    font-family: 'myfont';
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background: #d13722;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.logo{
+    font-weight: bold;
+    color: #ffffff;
+}
+.links{
+    width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+}
+main{
+    width: 70%;
+    margin: auto;
+    padding: 40px 0;
+}
+.title{
+    font-family: 'myfont';
+    border-bottom: 3px solid #d13722;
+}
+.all{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.work{
+    width: 40%;
+    margin: 20px 0;
+}
+.work img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.flame{
+    height: 250px;
+    overflow: hidden;
+}
+.card-body a{
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #000000;
+}
+
+footer{
+    font-family: 'myfont';
+    background: #d13722;
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:418px) {
+    .links{
+        flex-direction: column;
+        width: 100px;
+    }
+    .work{
+        width: 100%;
+    }
+    .flame{
+        height: 170px;
+    }
+}

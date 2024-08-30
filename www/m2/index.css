@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "myfont";
+    src: url("./PixelMplus12-Regular.ttf") format("truetype");
+}
+
+* {
+    font-family: 'myfont';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "myfont";
+    src: url("./PixelMplus12-Regular.ttf") format("truetype");
+    line-height: 3;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background: #d13722;
+}
+
+.logo {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.links {
+    width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.top {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    overflow: hidden;
+    background: #000000;
+}
+
+.top img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    opacity: 0;
+}
+
+.top img:nth-child(1) {
+    animation: top-anima1 10s infinite;
+}
+
+.top img:nth-child(2) {
+    animation: top-anima2 10s infinite;
+}
+
+.top img:nth-child(3) {
+    animation: top-anima3 10s infinite;
+}
+
+@keyframes top-anima1 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes top-anima2 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+}
+
+@keyframes top-anima3 {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.intr1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.img {
+    display: flex;
+    align-items: end;
+}
+
+.player1 {
+    height: 150px;
+}
+
+.player2 {
+    height: 100px;
+}
+
+.center {
+    width: 60%;
+    text-align: center;
+}
+
+.intr2 {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    padding: 70px;
+    width: 100%;
+    background-image: url(./grass.png);
+    background-size: auto;
+}
+
+.game-text {
+    width: 70%;
+    font-weight: bold;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    background: #000000;
+    margin: 30px auto;
+}
+.intr3{
+    display: flex;
+    justify-content: center;
+}
+.intr3-in {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.title {
+    width: 100%;
+    border-bottom: 3px solid #d13722;
+}
+
+.intr-images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.intr-images img {
+    height: 200px;
+}
+
+footer {
+    background: #d13722;
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:418px) {
+    .links {
+        flex-direction: column;
+        width: 100px;
+    }
+}

@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+.score{
+    color: white;
+}
+.field{
+    width: 250px;
+    height: 600px;
+    background-image: url("./assets/grass.png");
+    background-size: auto;
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 50px;
+    height: 50px;
+}
+.box img{
+    height: 100%;
+}
