@@ -83,11 +83,10 @@ export default function FieldScene({ setGameOver, score, setScore }) {
             }
             restock()
             newField.shift()
-            const row = stockField.shift()
-            if (row != undefined) {
-                newField.push(row)
-            }
-            setCount(prev => prev + 1)
+            // const row = stockField.shift()
+            // if (row != undefined) {
+            //     newField.push(row)
+            // }
             return newField
         })
     }, [stockField, restock,enemyDistance])
@@ -130,24 +129,26 @@ export default function FieldScene({ setGameOver, score, setScore }) {
         }
     }, [itemData]);
 
-    useEffect(() => {
-    }, [invincible])
 
     useEffect(() => {
         if (playing) {
             const intarval = setInterval(() => {
                 moveField()
-            }, 1000);
+                setCount(prev => prev + 1)
+            }, time);
             return () => {
                 clearInterval(intarval)
             }
         }
-    }, [playing])
+    }, [playing,time])
 
-    useEffect(() => {
+    useEffect(()=>{
         if(count%5 == 0 && count != 0){
             setTime(prev => prev - 100)
         }
+    },[count])
+
+    useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
         return () => {
             window.removeEventListener('keydown', handleKeyDown)
@@ -155,6 +156,8 @@ export default function FieldScene({ setGameOver, score, setScore }) {
     }, [field,count])
 
     useEffect(() => {
+        console.log(enemyDistance);
+        
         if (enemyDistance <= 0) {
             setPlaying(false)
             setGameOver(true)
