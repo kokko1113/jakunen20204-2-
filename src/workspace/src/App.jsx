@@ -4,8 +4,8 @@ import ResultScene from "./component/resultScene"
 
 export default function APP() {
     const [gameOver, setGameOver] = useState(false)
-
+    const [score, setScore] = useState(0)
     return (
-        <>{!gameOver ? <FieldScene></FieldScene> : <ResultScene></ResultScene>}</>
+        <>{!gameOver ? <FieldScene setGameOver={setGameOver} score={score} setScore={setScore}></FieldScene> : <ResultScene score={score}></ResultScene>}</>
     )
 }
